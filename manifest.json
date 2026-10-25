@@ -1,29 +1,52 @@
 {
   "schema": 1,
   "latest": {
-    "version": "v1.0.1",
-    "released_at": "2026-10-14T11:43:29+02:00",
-    "image_tag": "sha-d6b7874",
+    "version": "v1.0.2",
+    "released_at": "2026-10-25T08:30:05+01:00",
+    "image_tag": "sha-e3903c1",
     "min_version": null,
     "requires_operator": false,
     "operator_notes_de": null,
-    "notes_de": "## Das ist neu in Balsa v1.0.1\n\nEin kleines Sicherheitsupdate mit zwei Verbesserungen. Wir empfehlen, es\nbald einzuspielen. Das Update spielt sich von selbst ein, du musst nichts\nvorbereiten.\n\n### Passwort zurücksetzen sperrt niemanden mehr aus\n\nIn Balsa 1.0 konnte das Zurücksetzen eines Passworts unter Verwaltung,\nMitarbeitende dazu führen, dass sich die Person danach nicht mehr anmelden\nkonnte. Das ist behoben.\n\n- Balsa prüft jetzt vor dem Zurücksetzen, ob die Person mit dem neuen\n  Startpasswort wieder an ihre Inhalte kommt. Geht das nicht, ändert Balsa\n  nichts und sagt dir, was zu tun ist.\n- **Wer in 1.0 ausgesperrt wurde,** sieht bei der Anmeldung jetzt einen\n  Hinweis, sich an die Verwaltung zu wenden. Unter Verwaltung,\n  Verschlüsselung findest du dann „Zugänge wiederherstellen\". Dort gibst du\n  einmal euren Wiederherstellungsschlüssel ein, und Balsa repariert alle\n  betroffenen Zugänge auf einmal. Danach melden sich die Personen mit dem\n  Startpasswort an, das sie zuletzt bekommen haben. Kennt jemand es nicht\n  mehr, setzt du es ganz normal zurück.\n- Ist bei euch niemand betroffen, musst du nichts tun. Der Bereich erscheint\n  nur, wenn eine Reparatur nötig ist.\n\n### Keine Bilder mehr in Antworten von Balsa\n\nAntworten von Balsa zeigen keine Bilder mehr an. Steht in einer Antwort ein\nBild, erscheint stattdessen seine Beschreibung als Text. So kann eine\nAntwort keine Inhalte von fremden Seiten nachladen. Im Alltag merkt ihr\ndavon kaum etwas, Balsa schreibt ohnehin fast nie Bilder in seine Antworten.\nBilder in Aktuelles, euer Logo und Profilbilder sind davon nicht betroffen.\n",
+    "notes_de": "## Das ist neu in Balsa v1.0.2\n\nEin Sicherheitsupdate. Wir empfehlen, es bald einzuspielen. Das Update\nspielt sich von selbst ein, du musst nichts vorbereiten, und an der\nBedienung ändert sich nichts.\n\n### Sicherer beim Öffnen von Bildern und PDF-Dateien\n\nBalsa öffnet jeden Tag Bilder, Scans und PDF-Dateien, etwa wenn jemand\neinen Brief fotografiert und den Text auslesen lässt oder einen\nausgefüllten Bogen hochlädt. Für genau diese Stelle sind in den letzten\nWochen Sicherheitslücken bekannt geworden: eine eigens dafür gebaute Datei\nhätte darüber Schaden anrichten können. Ausnutzen konnte das nur jemand mit\neigenem Zugang zu Balsa. Mit dem Update sind diese Lücken geschlossen.\n\nAußerdem ist eine Lücke geschlossen, über die jemand ohne Anmeldung Balsa\nzu einem Neustart bringen konnte. Balsa startete danach von selbst wieder,\nwar aber für einen Moment nicht erreichbar.\n\n### Kleinere Verbesserungen\n\n- Laden viele Personen gleichzeitig große Dateien hoch, bleibt Balsa jetzt\n  stabil. Vorher konnte das bei einer langsamen Festplatte zu einem kurzen\n  Neustart führen.\n- Im Bericht-Arbeitsplatz zählt ein Meeting-Protokoll in der Mappe jetzt als\n  neu, und Balsa liest es beim Nachlesen mit. Vorher wurde ein Gespräch, in\n  dem nur ein Protokoll stand, übersehen.\n",
     "bundle": {
       "image": "balsa-deploy-bundle",
-      "digest": "sha256:70311a3e165b4eb6b7f120c8c44c4ba878309576773af207229b9621527b9084",
-      "tarball_sha256": "b506e574a05ccec3ab1b497685ff0e72bd45068cbb3b3606432aa78ebbe2e71f"
+      "digest": "sha256:52b7a60d538516fb8ee3f4653500d2d176bf6a3167a2bff90777b2ce26b36325",
+      "tarball_sha256": "52390085b88441f1f5f125c14e630283a3ca1711717e5632da158720e1257355"
     },
     "images": {
-      "balsa-pseudonymizer": "sha256:237a073b28ffb6618b4188c01282ec32ee6bb3448ff510e8a7abb70d7125f3dd",
-      "balsa-media": "sha256:f97ffb93adb33c5f0bbe421c450ff61d9da883d394cc4f84f44054b3bcb7ec87",
-      "balsa-document": "sha256:a48a9a78481d76146c167b34c757194db85f6bd4f1bc005bb46f25165e41442a",
-      "balsa-meeting": "sha256:34bb97d6854c21795cc65c2c25660e7daf7feb9a028962241aedf6faff93cf3f",
-      "balsa-tts": "sha256:f4385d7f1c0a03f6c10158081e5c4e8b0e2802b0e1155582f3c32d0efed5c7fd",
-      "balsa-backend": "sha256:ef41a658efc536efcbbf3d66e377ef292b81e20d77b2320c716f23a1d5928d8c",
-      "balsa-frontend": "sha256:f645c9791c196f5d38431374658d1adeca928fddaca52135e3c41dd81ffe09a0"
+      "balsa-pseudonymizer": "sha256:c0604d3b6d983d0f2f4d7995df7000d17a268f09c249a710f4cc998bd90fd1db",
+      "balsa-media": "sha256:6d4fe1bc276ec295af78e3c5fc79149f6e11279f1d741f142bb1ae82e32f0adf",
+      "balsa-document": "sha256:0ab192cad66bf52a32642960f740f59f47f85b36c55c9c3a22cf87ec57d59444",
+      "balsa-meeting": "sha256:7ec66577aa83ce87ba482dbdca600e81f9025d00d4e68953496450ff4f039934",
+      "balsa-tts": "sha256:f8e854e1f24be1a436e817e3659833da725288e8f27b0fc95e70b5c095118899",
+      "balsa-backend": "sha256:cbb8bda4a60a8510e3eb9e00ce9365a97b49a60b665b298a3164625f803f2f97",
+      "balsa-frontend": "sha256:1796ba6c05b0eb1328fb1fb7cc48a76e3102cee2047e66ff2166ab7163b989ed"
     }
   },
   "history": [
+    {
+      "version": "v1.0.1",
+      "released_at": "2026-10-14T11:43:29+02:00",
+      "image_tag": "sha-d6b7874",
+      "min_version": null,
+      "requires_operator": false,
+      "operator_notes_de": null,
+      "notes_de": "## Das ist neu in Balsa v1.0.1\n\nEin kleines Sicherheitsupdate mit zwei Verbesserungen. Wir empfehlen, es\nbald einzuspielen. Das Update spielt sich von selbst ein, du musst nichts\nvorbereiten.\n\n### Passwort zurücksetzen sperrt niemanden mehr aus\n\nIn Balsa 1.0 konnte das Zurücksetzen eines Passworts unter Verwaltung,\nMitarbeitende dazu führen, dass sich die Person danach nicht mehr anmelden\nkonnte. Das ist behoben.\n\n- Balsa prüft jetzt vor dem Zurücksetzen, ob die Person mit dem neuen\n  Startpasswort wieder an ihre Inhalte kommt. Geht das nicht, ändert Balsa\n  nichts und sagt dir, was zu tun ist.\n- **Wer in 1.0 ausgesperrt wurde,** sieht bei der Anmeldung jetzt einen\n  Hinweis, sich an die Verwaltung zu wenden. Unter Verwaltung,\n  Verschlüsselung findest du dann „Zugänge wiederherstellen\". Dort gibst du\n  einmal euren Wiederherstellungsschlüssel ein, und Balsa repariert alle\n  betroffenen Zugänge auf einmal. Danach melden sich die Personen mit dem\n  Startpasswort an, das sie zuletzt bekommen haben. Kennt jemand es nicht\n  mehr, setzt du es ganz normal zurück.\n- Ist bei euch niemand betroffen, musst du nichts tun. Der Bereich erscheint\n  nur, wenn eine Reparatur nötig ist.\n\n### Keine Bilder mehr in Antworten von Balsa\n\nAntworten von Balsa zeigen keine Bilder mehr an. Steht in einer Antwort ein\nBild, erscheint stattdessen seine Beschreibung als Text. So kann eine\nAntwort keine Inhalte von fremden Seiten nachladen. Im Alltag merkt ihr\ndavon kaum etwas, Balsa schreibt ohnehin fast nie Bilder in seine Antworten.\nBilder in Aktuelles, euer Logo und Profilbilder sind davon nicht betroffen.\n",
+      "bundle": {
+        "image": "balsa-deploy-bundle",
+        "digest": "sha256:70311a3e165b4eb6b7f120c8c44c4ba878309576773af207229b9621527b9084",
+        "tarball_sha256": "b506e574a05ccec3ab1b497685ff0e72bd45068cbb3b3606432aa78ebbe2e71f"
+      },
+      "images": {
+        "balsa-pseudonymizer": "sha256:237a073b28ffb6618b4188c01282ec32ee6bb3448ff510e8a7abb70d7125f3dd",
+        "balsa-media": "sha256:f97ffb93adb33c5f0bbe421c450ff61d9da883d394cc4f84f44054b3bcb7ec87",
+        "balsa-document": "sha256:a48a9a78481d76146c167b34c757194db85f6bd4f1bc005bb46f25165e41442a",
+        "balsa-meeting": "sha256:34bb97d6854c21795cc65c2c25660e7daf7feb9a028962241aedf6faff93cf3f",
+        "balsa-tts": "sha256:f4385d7f1c0a03f6c10158081e5c4e8b0e2802b0e1155582f3c32d0efed5c7fd",
+        "balsa-backend": "sha256:ef41a658efc536efcbbf3d66e377ef292b81e20d77b2320c716f23a1d5928d8c",
+        "balsa-frontend": "sha256:f645c9791c196f5d38431374658d1adeca928fddaca52135e3c41dd81ffe09a0"
+      }
+    },
     {
       "version": "v1.0.0",
       "released_at": "2026-10-09T09:12:10+02:00",
