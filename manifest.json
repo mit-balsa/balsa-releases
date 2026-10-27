@@ -1,29 +1,54 @@
 {
   "schema": 1,
   "latest": {
-    "version": "v1.0.2",
-    "released_at": "2026-10-25T08:30:05+01:00",
-    "image_tag": "sha-e3903c1",
+    "version": "v1.1.0",
+    "released_at": "2026-10-26T15:42:44+01:00",
+    "image_tag": "sha-33af1be",
     "min_version": null,
     "requires_operator": false,
     "operator_notes_de": null,
-    "notes_de": "## Das ist neu in Balsa v1.0.2\n\nEin Sicherheitsupdate. Wir empfehlen, es bald einzuspielen. Das Update\nspielt sich von selbst ein, du musst nichts vorbereiten, und an der\nBedienung ändert sich nichts.\n\n### Sicherer beim Öffnen von Bildern und PDF-Dateien\n\nBalsa öffnet jeden Tag Bilder, Scans und PDF-Dateien, etwa wenn jemand\neinen Brief fotografiert und den Text auslesen lässt oder einen\nausgefüllten Bogen hochlädt. Für genau diese Stelle sind in den letzten\nWochen Sicherheitslücken bekannt geworden: eine eigens dafür gebaute Datei\nhätte darüber Schaden anrichten können. Ausnutzen konnte das nur jemand mit\neigenem Zugang zu Balsa. Mit dem Update sind diese Lücken geschlossen.\n\nAußerdem ist eine Lücke geschlossen, über die jemand ohne Anmeldung Balsa\nzu einem Neustart bringen konnte. Balsa startete danach von selbst wieder,\nwar aber für einen Moment nicht erreichbar.\n\n### Kleinere Verbesserungen\n\n- Laden viele Personen gleichzeitig große Dateien hoch, bleibt Balsa jetzt\n  stabil. Vorher konnte das bei einer langsamen Festplatte zu einem kurzen\n  Neustart führen.\n- Im Bericht-Arbeitsplatz zählt ein Meeting-Protokoll in der Mappe jetzt als\n  neu, und Balsa liest es beim Nachlesen mit. Vorher wurde ein Gespräch, in\n  dem nur ein Protokoll stand, übersehen.\n",
+    "notes_de": "## Das ist neu in Balsa v1.1.0\n\nEin Update mit spürbaren Neuerungen für alle. Es spielt sich von selbst ein,\ndu musst nichts vorbereiten. Neu sind vor allem die Richtlinien eurer\nEinrichtung, Folien als PowerPoint, genauere Protokolle und, als Zusatz zum\nEinschalten, Wissen: Balsa beantwortet Fragen aus euren eigenen Unterlagen.\nDeine Mitarbeitenden sehen nach dem Update einen kurzen Beitrag „Neu in\nBalsa 1.1\" in Aktuelles.\n\n### Richtlinien eurer Einrichtung\n\nIn der Verwaltung hinterlegst du eure Richtlinien, etwa zur Dokumentation,\nzum Umgang mit Medikamenten oder zur Schweigepflicht. Mitarbeitende wählen im\nGespräch die passende Richtlinie aus, und Balsa richtet die Antwort danach,\nstatt allgemein zu antworten. Fragt jemand nach, nennt Balsa die Stelle in\nder Richtlinie. Beim Hinterlegen und bei jeder Änderung bestätigst du, dass\ndie Richtlinie keine personenbezogenen Daten enthält.\n\n### Wissen: Antworten aus euren eigenen Unterlagen\n\nMit Wissen legt eure Einrichtung eine Bibliothek an, zum Beispiel\nKonzeption, Handbuch, Dienstanweisungen oder Gesetzestexte. Mitarbeitende\nstellen ihre Frage, und Balsa antwortet aus diesen Dokumenten, immer mit der\nFundstelle zum Nachlesen. Fragen, auf die die Bibliothek noch keine Antwort\nhat, sammelt Balsa ohne Namen, damit ihr Lücken schließen könnt. Welche\nOrdner welche Rolle sieht, legst du fest.\n\nWissen kommt mit diesem Update auf euren Server, ist aber ab Werk aus. In\nder aktuellen Testphase ist Wissen in Balsa Assistenz vorerst enthalten. Du\nschaltest es in der Verwaltung unter Einrichtung › Wissen ein, mit deinem\nPasswort, ohne eure IT. Direkt daneben stehen die Datenschutz-Unterlagen zum\nLesen und Drucken. Geht sie bitte vorher durch, etwa mit eurer\nDatenschutzbeauftragten. Ausschalten geht genauso und löscht nichts.\n\n### Folien als PowerPoint\n\nUnter „Dokument erstellen\" macht Balsa aus deinen Stichpunkten jetzt auch\nFolien, etwa für eine Teamsitzung oder eine Elternrunde, und du lädst sie als\nPowerPoint-Datei herunter.\n\n### Genauere Protokolle\n\nBalsa versteht Aufnahmen von Besprechungen jetzt besser, besonders in\ngrößeren Runden ab vier Personen. Beim Zuordnen der Stimmen gibt es die\nAntwort „Weiß ich nicht oder mehrere\", wenn eine Stimme nicht eindeutig ist.\n\n### Bessere Antworten\n\nBalsa nutzt jetzt besser, was schon da ist: die gewählte Richtlinie, die\nUnterlagen in der Mappe und den bisherigen Gesprächsverlauf. Es fragt nicht\nmehr nach, was dort schon steht, und setzt nichts ein, wofür es keine\nGrundlage gibt. Die Hilfebedarfsbögen (HEB-A, HEB-B, HEB-C) beschreiben den\nBedarf nur noch aus dem, was genannt wurde, und Bedarf, Ziel und Maßnahme\nbauen aufeinander auf.\n\n### Für die Verwaltung\n\n- **Anmeldung über euer Verzeichnis:** Balsa kann eure Anmeldung aus eurem\n  Verzeichnis übernehmen, etwa Active Directory. Ab Werk aus, eingeschaltet\n  wird es in der Verwaltung mit eurem Passwort.\n- **Verwaltungsrechte:** Wer jemandem Verwaltungsrechte gibt, bestätigt das\n  mit dem eigenen Passwort. Wird ein Passwort zurückgesetzt, bekommt die\n  Person einen Hinweis.\n- **Benutzernamen** dürfen jetzt auch Punkt und Bindestrich enthalten, etwa\n  `anna.schmidt` oder `team-nord`.\n- **Briefkopf:** Wurde eure Word-Vorlage für den Briefkopf vor diesem Update\n  hochgeladen und passt sie nicht mehr zur neuen Prüfung, zeigt die\n  Verwaltung „Bitte die Vorlage neu hochladen\" mit dem Grund. Dann einmal neu\n  hochladen, bis dahin entstehen Dokumente ohne Briefkopf.\n- **Speicher für Wissen:** Wissen ist ab jetzt auf jedem Server installiert,\n  auch wenn ihr es nicht einschaltet. Es belegt dann rund 1,4 GB\n  Arbeitsspeicher. Das Update lädt deshalb einmalig mehr herunter und dauert\n  länger als sonst, auf der Festplatte kommen bis zu rund 19 GB dazu.\n- **Aufgaben:** Alle Aufgaben sind jetzt für alle Rollen voreingestellt.\n  Einschränken kannst du sie weiterhin in der Rollenverwaltung.\n\n### Kleinere Verbesserungen\n\n- „Frag Balsa\" heißt jetzt „Frei fragen und schreiben\".\n- Bilder in Aktuelles öffnen sich mit einem Klick groß.\n- Im Bericht lässt sich ein gelöschter Eintrag mit „Rückgängig\" zurückholen.\n- „Feedback geben\" ist jetzt eine eigene Seite statt eines Fensters.\n- Sätze im Bericht beginnen nicht mehr fast immer mit dem Namen der Person.\n- Getippter Text geht beim Wegklicken nicht mehr verloren, auch außerhalb\n  des Gesprächs.\n- Tabellen in Antworten, etwa die Aufgaben im Protokoll, nutzen die volle\n  Breite: Zuständig und Frist sind ohne seitliches Scrollen zu sehen.\n- „Aufgabe oder Bogen wünschen\" ist kürzer geworden.\n- Bei der Aufnahme prüft Balsa Vor- und Nachname schon im ersten Schritt.\n",
     "bundle": {
       "image": "balsa-deploy-bundle",
-      "digest": "sha256:52b7a60d538516fb8ee3f4653500d2d176bf6a3167a2bff90777b2ce26b36325",
-      "tarball_sha256": "52390085b88441f1f5f125c14e630283a3ca1711717e5632da158720e1257355"
+      "digest": "sha256:7d9e993368185345f8745b0dcb3f181cd8f93ff75a461dac1bc7163d82aae7d1",
+      "tarball_sha256": "a2eefb5860cea6d26c9e063df1e034d3c42c1df120635a9a1132dc095f7c1e98"
     },
     "images": {
-      "balsa-pseudonymizer": "sha256:c0604d3b6d983d0f2f4d7995df7000d17a268f09c249a710f4cc998bd90fd1db",
-      "balsa-media": "sha256:6d4fe1bc276ec295af78e3c5fc79149f6e11279f1d741f142bb1ae82e32f0adf",
-      "balsa-document": "sha256:0ab192cad66bf52a32642960f740f59f47f85b36c55c9c3a22cf87ec57d59444",
-      "balsa-meeting": "sha256:7ec66577aa83ce87ba482dbdca600e81f9025d00d4e68953496450ff4f039934",
-      "balsa-tts": "sha256:f8e854e1f24be1a436e817e3659833da725288e8f27b0fc95e70b5c095118899",
-      "balsa-backend": "sha256:cbb8bda4a60a8510e3eb9e00ce9365a97b49a60b665b298a3164625f803f2f97",
-      "balsa-frontend": "sha256:1796ba6c05b0eb1328fb1fb7cc48a76e3102cee2047e66ff2166ab7163b989ed"
-    }
+      "balsa-pseudonymizer": "sha256:73e95c93117ff9cf0e6484f8b5af35ba299b65290b16f50198d6cc9f893334ec",
+      "balsa-media": "sha256:0a76157007283325d792af2cf841853635ebff90442e1d60d9b96960311005df",
+      "balsa-document": "sha256:3c78856d967c7f407b2613478ff83d555b2140627fce96a78fb62a8d2e3880eb",
+      "balsa-meeting": "sha256:7506282f17ceb7130c97f0c71db27c00fdb26ef9b0aa4b1729cb3a855e55ab58",
+      "balsa-tts": "sha256:4413248b2d428ac6de6cad2aff5357dd5c662cc684a2064ff0c93c481b117cd4",
+      "balsa-backend": "sha256:91c6ad075ef21bd98f33c18edccd45a6334345563b6c17e7a32a25a518deb5e5",
+      "balsa-frontend": "sha256:acf15b7193589994439746911e15b3d4f5ae4426274c36ed589b25633dda8157",
+      "balsa-wissen": "sha256:ad2d0084109d7e0ca81ab1208b3850d90d84dd4f71cc7095925d2abbc4659cb3"
+    },
+    "optional_images": {}
   },
   "history": [
+    {
+      "version": "v1.0.2",
+      "released_at": "2026-10-25T08:30:05+01:00",
+      "image_tag": "sha-e3903c1",
+      "min_version": null,
+      "requires_operator": false,
+      "operator_notes_de": null,
+      "notes_de": "## Das ist neu in Balsa v1.0.2\n\nEin Sicherheitsupdate. Wir empfehlen, es bald einzuspielen. Das Update\nspielt sich von selbst ein, du musst nichts vorbereiten, und an der\nBedienung ändert sich nichts.\n\n### Sicherer beim Öffnen von Bildern und PDF-Dateien\n\nBalsa öffnet jeden Tag Bilder, Scans und PDF-Dateien, etwa wenn jemand\neinen Brief fotografiert und den Text auslesen lässt oder einen\nausgefüllten Bogen hochlädt. Für genau diese Stelle sind in den letzten\nWochen Sicherheitslücken bekannt geworden: eine eigens dafür gebaute Datei\nhätte darüber Schaden anrichten können. Ausnutzen konnte das nur jemand mit\neigenem Zugang zu Balsa. Mit dem Update sind diese Lücken geschlossen.\n\nAußerdem ist eine Lücke geschlossen, über die jemand ohne Anmeldung Balsa\nzu einem Neustart bringen konnte. Balsa startete danach von selbst wieder,\nwar aber für einen Moment nicht erreichbar.\n\n### Kleinere Verbesserungen\n\n- Laden viele Personen gleichzeitig große Dateien hoch, bleibt Balsa jetzt\n  stabil. Vorher konnte das bei einer langsamen Festplatte zu einem kurzen\n  Neustart führen.\n- Im Bericht-Arbeitsplatz zählt ein Meeting-Protokoll in der Mappe jetzt als\n  neu, und Balsa liest es beim Nachlesen mit. Vorher wurde ein Gespräch, in\n  dem nur ein Protokoll stand, übersehen.\n",
+      "bundle": {
+        "image": "balsa-deploy-bundle",
+        "digest": "sha256:52b7a60d538516fb8ee3f4653500d2d176bf6a3167a2bff90777b2ce26b36325",
+        "tarball_sha256": "52390085b88441f1f5f125c14e630283a3ca1711717e5632da158720e1257355"
+      },
+      "images": {
+        "balsa-pseudonymizer": "sha256:c0604d3b6d983d0f2f4d7995df7000d17a268f09c249a710f4cc998bd90fd1db",
+        "balsa-media": "sha256:6d4fe1bc276ec295af78e3c5fc79149f6e11279f1d741f142bb1ae82e32f0adf",
+        "balsa-document": "sha256:0ab192cad66bf52a32642960f740f59f47f85b36c55c9c3a22cf87ec57d59444",
+        "balsa-meeting": "sha256:7ec66577aa83ce87ba482dbdca600e81f9025d00d4e68953496450ff4f039934",
+        "balsa-tts": "sha256:f8e854e1f24be1a436e817e3659833da725288e8f27b0fc95e70b5c095118899",
+        "balsa-backend": "sha256:cbb8bda4a60a8510e3eb9e00ce9365a97b49a60b665b298a3164625f803f2f97",
+        "balsa-frontend": "sha256:1796ba6c05b0eb1328fb1fb7cc48a76e3102cee2047e66ff2166ab7163b989ed"
+      }
+    },
     {
       "version": "v1.0.1",
       "released_at": "2026-10-14T11:43:29+02:00",
